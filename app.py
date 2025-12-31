@@ -1,5 +1,6 @@
 # Some portions of this code were developed with the help of AI tools (e.g., ChatGPT)
 # for debugging and brainstorming. All logic was reviewed, modified, and understood by me.
+import os
 
 from cs50 import SQL
 from flask import Flask, render_template, redirect, request, session
