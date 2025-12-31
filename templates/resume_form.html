@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %} - New Resume{% endblock %}
+
+{% block main %}
+<h1>Create your résumé</h1>
+<form action="/resume/new" method="post" class="text-start">
+
+  <div class="mb-3">
+    <label class="form-label">Full name</label>
+    <input class="form-control" name="full_name" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Headline (e.g. Software Engineer)</label>
+    <input class="form-control" name="headline">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input class="form-control" name="email" type="email">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input class="form-control" name="phone">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Summary</label>
+    <textarea class="form-control" name="summary" rows="3"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Education</label>
+    <textarea class="form-control" name="education" rows="3"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Experience</label>
+    <textarea class="form-control" name="experience" rows="4"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Skills</label>
+    <textarea class="form-control" name="skills" rows="2"></textarea>
+  </div>
+
+  <button class="btn btn-primary">Generate résumé</button>
+</form>
+{% endblock %}

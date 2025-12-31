@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %} - Home - {% endblock %}
+
+{% block main %}
+<div class="d-flex flex-column align-items-center justify-content-center"
+     style="min-height: 60vh;">
+
+  <h1 class="mb-3 text-center">Resume 2 WebPage</h1>
+
+  <p class="text-muted text-center mb-4">
+    Turn your résumé into a clean, shareable website.
+  </p>
+
+  <div>
+    <a class="btn btn-primary me-2" href="/resume/new">
+      Create your first portfolio
+    </a>
+
+    <a class="btn btn-outline-secondary" href="/resumes">
+      My resumes
+    </a>
+  </div>
+
+</div>
+
+{% endblock %}

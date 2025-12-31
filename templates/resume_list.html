@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %} - My Résumés {% endblock %}
+
+{% block main %}
+
+<h1 class="mb-4 text-center">My Resumes</h1>
+
+<div class="mb-3 text-center">
+  <a class="btn btn-primary" href="/resume/new">Create new resume</a>
+</div>
+
+{% if resumes|length == 0 %}
+  <p class="text-center text-muted">You don’t have any resumes yet.</p>
+{% else %}
+  <div class="col-md-8 mx-auto">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Headline</th>
+          <th scope="col">View</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in resumes %}
+        <tr>
+          <td>{{ r.id }}</td>
+          <td>{{ r.full_name }}</td>
+          <td>{{ r.headline or '' }}</td>
+          <td>
+            <a class="btn btn-sm btn-outline-secondary" href="/resume/{{ r.id }}">
+              Open
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endif %}
+
+{% endblock %}

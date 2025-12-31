@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %} - {{ resume.full_name }} {% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="col-md-8 mx-auto">
+
+    {% include "resume_body.html" %}
+
+  </div>
+</div>
+
+<hr class="my-4">
+
+<h2 class="h5 mb-2">Share your portfolio</h2>
+
+<div class="input-group mb-2">
+  <input
+    id="share-link"
+    class="form-control"
+    type="text"
+    value="{{ url_for('resume_public', resume_id=resume.id, _external=True) }}"
+    readonly
+  >
+  <button class="btn btn-outline-secondary" onclick="copyShareLink()">Copy</button>
+</div>
+
+<script>
+function copyShareLink() {
+  const input = document.getElementById('share-link');
+  navigator.clipboard.writeText(input.value)
+    .then(() => alert("Link copied!"))
+    .catch(() => alert("Copy failed, copy manually."));
+}
+</script>
+
+{% endblock %}
