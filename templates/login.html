@@ -1,39 +1,45 @@
 {% extends "layout.html" %}
 
-{% block title %} - Login - {% endblock %}
+{% block title %}Login — Resume2Web{% endblock %}
 
 {% block main %}
-<h1 class="mb-4 text-center">Log In</h1>
 
-<form action="/login" method="post" class="col-md-6 mx-auto text-start">
+<section class="auth-page">
 
-  <div class="mb-3">
-    <label class="form-label">Username</label>
-    <input
-      class="form-control"
-      name="username"
-      autocomplete="username"
-      required
-    >
-  </div>
+  <h1 class="auth-title">Log in</h1>
 
-  <div class="mb-3">
-    <label class="form-label">Password</label>
-    <input
-      class="form-control"
-      type="password"
-      name="password"
-      autocomplete="current-password"
-      required
-    >
-  </div>
+  <form action="/login" method="post" class="auth-form">
 
-  <button class="btn btn-primary w-100">Log in</button>
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input
+        class="form-control"
+        name="username"
+        autocomplete="username"
+        required
+      >
+    </div>
 
-  <p class="mt-3 text-center">
-    Don’t have an account?
-    <a href="/register">Register</a>
-  </p>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input
+        class="form-control"
+        type="password"
+        name="password"
+        autocomplete="current-password"
+        required
+      >
+    </div>
 
-</form>
+    <button class="btn btn-dark w-100">Log in</button>
+
+    <p class="auth-footer">
+      Don’t have an account?
+      <a href="/register">Register</a>
+    </p>
+
+  </form>
+
+</section>
+
 {% endblock %}

@@ -6,13 +6,23 @@
 
 #### Author: **Aselle Cunningham**
 
-<img width="1908" height="1068" alt="Screenshot 2026-01-06 at 10 37 26 AM" src="https://github.com/user-attachments/assets/fa0b3665-9141-42d4-b26a-3e408c06e79b" />
-<img width="1910" height="1074" alt="Screenshot 2026-01-06 at 10 38 09 AM" src="https://github.com/user-attachments/assets/3bd54916-38e1-45fb-9930-1a7297bc3fcd" />
-<img width="1907" height="1071" alt="Screenshot 2026-01-06 at 10 41 26 AM" src="https://github.com/user-attachments/assets/7c9dbfac-b0d4-40e1-ba18-caf14684fe63" />
-<img width="1906" height="1067" alt="Screenshot 2026-01-06 at 10 41 48 AM" src="https://github.com/user-attachments/assets/c013debd-1d30-450a-84ec-0988190a096a" />
-<img width="1909" height="1074" alt="Screenshot 2026-01-06 at 10 42 09 AM" src="https://github.com/user-attachments/assets/83685cff-cef8-4851-b23e-b1affc43687e" />
-<img width="1904" height="1068" alt="Screenshot 2026-01-06 at 10 42 27 AM" src="https://github.com/user-attachments/assets/b891fcbd-bda6-4f9c-9236-102f5ec9a1f1" />
-<img width="1911" height="1075" alt="Screenshot 2026-01-06 at 10 42 45 AM" src="https://github.com/user-attachments/assets/a6960602-bf6f-4a94-bd87-4c9ccee29680" />
+![Description](static/assets/screen1.png)
+![Description](static/assets/screen2.png)
+![Description](static/assets/screen3.png)
+![Description](static/assets/screen4.png)
+![Description](static/assets/screen5.png)
+![Description](static/assets/screen6.png)
+![Description](static/assets/screen7.png)
+![Description](static/assets/screen8.png)
+![Description](static/assets/screen9.png)
+
+# <img width="1908" height="1068" alt="Screenshot 2026-01-06 at 10 37 26 AM" src="/assets/screen1.png" />
+# <img width="1910" height="1074" alt="Screenshot 2026-01-06 at 10 38 09 AM" src="https://github.com/user-attachments/assets/3bd54916-38e1-45fb-9930-1a7297bc3fcd" />
+# <img width="1907" height="1071" alt="Screenshot 2026-01-06 at 10 41 26 AM" src="https://github.com/user-attachments/assets/7c9dbfac-b0d4-40e1-ba18-caf14684fe63" />
+# <img width="1906" height="1067" alt="Screenshot 2026-01-06 at 10 41 48 AM" src="https://github.com/user-attachments/assets/c013debd-1d30-450a-84ec-0988190a096a" />
+# <img width="1909" height="1074" alt="Screenshot 2026-01-06 at 10 42 09 AM" src="https://github.com/user-attachments/assets/83685cff-cef8-4851-b23e-b1affc43687e" />
+# <img width="1904" height="1068" alt="Screenshot 2026-01-06 at 10 42 27 AM" src="https://github.com/user-attachments/assets/b891fcbd-bda6-4f9c-9236-102f5ec9a1f1" />
+# <img width="1911" height="1075" alt="Screenshot 2026-01-06 at 10 42 45 AM" src="https://github.com/user-attachments/assets/a6960602-bf6f-4a94-bd87-4c9ccee29680" />
 
 ---
 
@@ -32,6 +42,15 @@ Users can:
 The application was first developed inside the CS50 Codespace, then migrated to my local machine, version-controlled with Git, and finally deployed as a live Flask app using Render.
 
 ---
+
+## 🧭 App Flow
+
+1. User registers
+2. Creates a résumé
+3. Views it in dashboard
+4. Copies the public link
+5. Shares it anywhere
+
 
 ## ✨ Features
 
@@ -61,17 +80,17 @@ Each résumé automatically becomes a clean portfolio page.
 
 There are two different views:
 
-1️⃣ **Dashboard View (private, logged-in users)**
-Includes controls like “My Resumes” and “Share portfolio”.
+1️⃣ **Dashboard View** – private (only logged-in users)
 
-2️⃣ **Public View (shareable)**
-Same beautiful résumé content — **without** app navigation or controls.
+2️⃣ **Public View** – shareable portfolio  
+   No navbar, no editing controls, just the résumé.
+
 
 Example structure:
 
 ```
-/resume/5   → private app view
-/p/5        → public clean portfolio link
+🔒 `/resume/5` → private dashboard view  
+🌍 `/p/5` → public portfolio link
 ```
 
 ### 🔗 Shareable Links
@@ -105,9 +124,11 @@ This helped separate presentation from UI logic — something emphasized in CS50
 | **Flask-Session**    | User sessions              |
 | **Werkzeug**         | Password hashing           |
 | **CS50 SQL library** | Simplified database access |
-| **Bootstrap**        | Styling                    |
+| **Bootstrap**        | Base grid + form helpers   |
+| **Custom CSS**       | Core UI design             |
 | **Gunicorn**         | Production server          |
 | **Render**           | Hosting                    |
+
 
 ---
 
@@ -129,6 +150,7 @@ hash TEXT NOT NULL
 id INTEGER PRIMARY KEY
 user_id INTEGER NOT NULL
 full_name TEXT
+headline TEXT
 email TEXT
 phone TEXT
 summary TEXT
@@ -137,6 +159,7 @@ experience TEXT
 skills TEXT
 FOREIGN KEY(user_id) REFERENCES users(id)
 ```
+
 
 This follows CS50 finance-style design:
 each resume belongs to the user who created it.
@@ -222,7 +245,7 @@ python app.py
 App runs at:
 
 ```
-http://127.0.0.1:5000 locally
-https://projectcs50-95dr.onrender.com/ deployed
+http://127.0.0.1:5000 # locally
+https://projectcs50-95dr.onrender.com/ # deployed
+```
 
----

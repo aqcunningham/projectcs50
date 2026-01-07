@@ -1,44 +1,59 @@
 {% extends "layout.html" %}
 
-{% block title %} - My Résumés {% endblock %}
+{% block title %}My Resumes — Resume2Web{% endblock %}
 
 {% block main %}
 
-<h1 class="mb-4 text-center">My Resumes</h1>
+<section class="list-page">
 
-<div class="mb-3 text-center">
-  <a class="btn btn-primary" href="/resume/new">Create new resume</a>
-</div>
+  {% if resumes|length == 0 %}
 
-{% if resumes|length == 0 %}
-  <p class="text-center text-muted">You don’t have any resumes yet.</p>
-{% else %}
-  <div class="col-md-8 mx-auto">
-    <table class="table table-hover align-middle">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Headline</th>
-          <th scope="col">View</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for r in resumes %}
-        <tr>
-          <td>{{ r.id }}</td>
-          <td>{{ r.full_name }}</td>
-          <td>{{ r.headline or '' }}</td>
-          <td>
-            <a class="btn btn-sm btn-outline-secondary" href="/resume/{{ r.id }}">
-              Open
-            </a>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-{% endif %}
+    <div class="list-empty">
+      <h1 class="list-title">My resumes</h1>
+      <p>You don’t have any resumes yet.</p>
+      <a class="btn btn-dark" href="/resume/new">
+        Create your first resume
+      </a>
+    </div>
+
+  {% else %}
+
+    <div class="list-header">
+      <h1 class="list-title">My resumes</h1>
+      <a class="btn btn-dark" href="/resume/new">
+        Create new resume
+      </a>
+    </div>
+
+    <div class="list-card">
+      <table class="table table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Headline</th>
+            <th scope="col" class="text-end">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in resumes %}
+          <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.full_name }}</td>
+            <td>{{ r.headline or '' }}</td>
+            <td class="text-end">
+              <a class="btn btn-sm btn-outline-secondary" href="/resume/{{ r.id }}">
+                Open
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  {% endif %}
+
+</section>
 
 {% endblock %}

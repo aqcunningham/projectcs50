@@ -3,57 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='assets/Q.png') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/Q.png') }}">
 
-	<title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+
+  <title>
 
 {% block title %}
     Resume
 {% endblock %}
 
 	</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  body {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    backgroud-color: #ebcfb2;
-  }
-
-  h1, h2, h3, h4 {
-    font-weight: 600;
-    letter-spacing: 0.2px;
-  }
-
-  .card-like {
-    background: #ebcfb2;
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
-  }
-</style>
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="/">Resume 2 WebPage</a>
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <a class="navbar-brand logo" href="/">Resume2Web</a>
 
-    <div class="ms-auto">
       {% if session.user_id %}
-        <a class="btn btn-outline-secondary btn-sm me-2" href="/resumes">My Resumes</a>
-        <a class="btn btn-outline-danger btn-sm" href="/logout">Logout</a>
+        <div class="nav-buttons">
+          <a class="btn btn-login" href="/resumes">My Resumes</a>
+          <a class="btn btn-outline" href="/logout">Logout</a>
+        </div>
       {% else %}
-        <a class="btn btn-outline-primary btn-sm me-2" href="/login">Login</a>
-        <a class="btn btn-primary btn-sm" href="/register">Register</a>
+        <div class="nav-buttons">
+          <a class="btn btn-login" href="/login">Login</a>
+          <a class="btn btn-register" href="/register">Register</a>
+        </div>
       {% endif %}
     </div>
-  </div>
-</nav>
-	<main class="container py-5">
-    {% block main %}{% endblock %}
-</main>
+  </nav>
 
+  <main class="main">
+    {% block main %}{% endblock %}
+  </main>
 </body>
 </html>
+
+

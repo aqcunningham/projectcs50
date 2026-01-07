@@ -1,0 +1,359 @@
+/* ========= Global Layout ========= */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0ffd2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+}
+
+/* ========= Navbar ========= */
+
+.navbar {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6%;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* ========= Button Base ========= */
+
+.btn {
+  padding: 11px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+/* Navbar buttons */
+
+.btn-login {
+  background: transparent;
+  color: #1e293b;
+  border: 2px solid #1e293b;
+}
+
+.btn-login:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.btn-register {
+  background: #1e293b;
+  color: white;
+}
+
+.btn-register:hover {
+  background: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.3);
+  color: white;
+}
+
+/* Logout – text-style button */
+
+.btn-logout {
+  background: transparent;
+  color: #ef4444;
+  border: none;
+  font-weight: 600;
+}
+
+.btn.btn-logout {
+  padding: 0;
+}
+
+.btn-logout:hover {
+  color: #b91c1c;
+  text-decoration: underline;
+}
+
+/* ========= Hero (home page) ========= */
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 4.5em;
+  color: #1e293b;
+  margin-bottom: 24px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  font-size: 1.4em;
+  color: #475569;
+  margin-bottom: 50px;
+  max-width: 600px;
+  font-weight: 500;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Hero buttons (landing page) */
+
+.hero .hero-btn-primary {
+  padding: 18px 45px;
+  background: #1e293b;
+  color: white;
+  font-size: 1.15em;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 3px solid #1e293b;
+}
+
+.hero .hero-btn-primary:hover {
+  background: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30,41,59,0.3);
+}
+
+.hero .hero-btn-secondary {
+  padding: 18px 45px;
+  background: white;
+  color: #1e293b;
+  font-size: 1.15em;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 3px solid #1e293b;
+}
+
+.hero .hero-btn-secondary:hover {
+  background: #1e293b;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30,41,59,0.2);
+}
+
+/* ========= Auth pages (login / register) ========= */
+
+.auth-page {
+  margin: auto;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-title {
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #1e293b;
+}
+
+.auth-form {
+  background: white;
+  padding: 28px 26px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.form-page {
+  margin: auto;
+  width: 100%;
+  padding: 40px 20px 60px;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #1e293b;
+}
+
+.app-form {
+  max-width: 760px;
+  margin: 0 auto;
+  background: white;
+  padding: 28px 26px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ========= Resume list page ========= */
+
+.list-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  transform: translateY(-20px);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.list-title {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.list-empty {
+  text-align: center;
+}
+
+.list-empty .list-title {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.list-empty p {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* ========= Resume view + public portfolio layout ========= */
+
+.resume-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+}
+
+.resume-card {
+  background: #ffffff;
+  padding: 32px 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.resume-share {
+  margin-top: 20px;
+}
+
+.resume-share-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+/* ========= Resume header ========= */
+
+.resume-header {
+  margin-bottom: 24px;
+}
+
+.resume-name {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.resume-headline {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.resume-contact {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ========= Resume sections ========= */
+
+.resume-section {
+  margin: 22px 0;
+}
+
+.resume-section-title {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* Text blocks — respect line breaks */
+
+.resume-text {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.55;
+  font-size: 0.96rem;
+  color: #111827;
+}
+
+/* Skills chips */
+
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e5f0ff;
+  color: #1e293b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Public portfolio footer line */
+
+.public-credit {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #6b7280;
+}

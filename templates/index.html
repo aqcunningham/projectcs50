@@ -1,27 +1,23 @@
 {% extends "layout.html" %}
 
-{% block title %} - Home - {% endblock %}
+{% block title %}Resume2Web{% endblock %}
 
 {% block main %}
-<div class="d-flex flex-column align-items-center justify-content-center"
-     style="min-height: 60vh;">
+  <section class="hero">
+    <h1 class="hero-title">Resume 2 Web</h1>
 
-  <h1 class="mb-3 text-center">Resume 2 WebPage</h1>
+    <p class="hero-subtitle">
+      Turn your resume into a clean, shareable website.
+    </p>
 
-  <p class="text-muted text-center mb-4">
-    Turn your résumé into a clean, shareable website.
-  </p>
+    <div class="cta-buttons">
+      <a href="/resume/new" class="btn hero-btn-primary">
+        Create your portfolio
+      </a>
 
-  <div>
-    <a class="btn btn-primary me-2" href="/resume/new">
-      Create your first portfolio
-    </a>
-
-    <a class="btn btn-outline-secondary" href="/resumes">
-      My resumes
-    </a>
-  </div>
-
-</div>
-
+      <a href="/resumes" class="btn hero-btn-secondary">
+        My resumes
+      </a>
+    </div>
+  </section>
 {% endblock %}
