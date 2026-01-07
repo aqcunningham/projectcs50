@@ -16,14 +16,6 @@
 ![Description](static/assets/screen8.png)
 ![Description](static/assets/screen9.png)
 
-# <img width="1908" height="1068" alt="Screenshot 2026-01-06 at 10 37 26 AM" src="/assets/screen1.png" />
-# <img width="1910" height="1074" alt="Screenshot 2026-01-06 at 10 38 09 AM" src="https://github.com/user-attachments/assets/3bd54916-38e1-45fb-9930-1a7297bc3fcd" />
-# <img width="1907" height="1071" alt="Screenshot 2026-01-06 at 10 41 26 AM" src="https://github.com/user-attachments/assets/7c9dbfac-b0d4-40e1-ba18-caf14684fe63" />
-# <img width="1906" height="1067" alt="Screenshot 2026-01-06 at 10 41 48 AM" src="https://github.com/user-attachments/assets/c013debd-1d30-450a-84ec-0988190a096a" />
-# <img width="1909" height="1074" alt="Screenshot 2026-01-06 at 10 42 09 AM" src="https://github.com/user-attachments/assets/83685cff-cef8-4851-b23e-b1affc43687e" />
-# <img width="1904" height="1068" alt="Screenshot 2026-01-06 at 10 42 27 AM" src="https://github.com/user-attachments/assets/b891fcbd-bda6-4f9c-9236-102f5ec9a1f1" />
-# <img width="1911" height="1075" alt="Screenshot 2026-01-06 at 10 42 45 AM" src="https://github.com/user-attachments/assets/a6960602-bf6f-4a94-bd87-4c9ccee29680" />
-
 ---
 
 ## 🎯 Overview
