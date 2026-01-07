@@ -1,6 +1,6 @@
 ---
 
-# 📄 Resume2Web — Turn Your Résumé Into a Shareable Portfolio
+# 📄 Resume2Web — Turn Your Resume Into a Shareable Portfolio
 
 #### Video Demo: `https://www.youtube.com/watch?v=okyh8sM6wwY`
 
